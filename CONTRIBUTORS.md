@@ -58,6 +58,7 @@ The following people have contributed to the development of Rich:
 - [Olivier Philippon](https://github.com/DrBenton)
 - [Kylian Point](https://github.com/p0lux)
 - [Kyle Pollina](https://github.com/kylepollina)
+- [Aditya Pratap](https://github.com/adityapratap0077-cloud)
 - [Sebastián Ramírez](https://github.com/tiangolo)
 - [Grant Ramsay](https://github.com/seapagan)
 - [Felipe Guedes](https://github.com/guedesfelipe)

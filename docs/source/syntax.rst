@@ -44,6 +44,23 @@ Background color
 You can override the background color from the theme by supplying a ``background_color`` argument to the constructor. This should be a string in the same format a style definition accepts, e.g. "red", "#ff0000", "rgb(255,0,0)" etc. You may also set the special value "default" which will use the default background color set in the terminal.
 
 
+Highlighting ranges
+-------------------
+
+Call :meth:`~rich.syntax.Syntax.stylize_range` to apply a style to a range of the code, for example to draw attention to a particular line. The range is given as a pair of ``(line_number, column)`` tuples, where line numbers start at 1 and columns start at 0::
+
+    from rich.console import Console
+    from rich.syntax import Syntax
+
+    code = "def hello():\n    print('hello, world')\n"
+    syntax = Syntax(code, "python")
+    syntax.stylize_range("bold red", (2, 4), (2, 25))
+    console = Console()
+    console.print(syntax)
+
+The style is applied on top of the syntax highlighting. Pass ``style_before=True`` to apply it underneath instead, so the theme's own styles take precedence where they overlap. Ranges that fall outside of the code are ignored.
+
+
 Syntax CLI
 ----------
 
